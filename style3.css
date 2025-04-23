@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+  }
+  .gif-container {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  
+  .gif-container img {
+    max-width: 200px;
+    border-radius: 12px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+  }
+  .content-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px 25px;
+    border-radius: 16px;
+    min-width: 300px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .size-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .size-buttons button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px 0;
+    background-color: #eee;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .size-buttons button.active {
+    background-color: #000;
+    color: #fff;
+  }
+  .size-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+  }
+  .size-table th,
+  .size-table td {
+    text-align: left;
+    padding: 10px 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+  }
+  .how-to-measure h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .measurement-guide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .measurement-guide img {
+    max-width: 160px;
+    height: auto;
+  }
+  .measurement-guide ul {
+    list-style: none;
+    font-size: 14px;
+    padding-left: 0;
+    flex: 1;
+  }
+  .measurement-guide li {
+    margin-bottom: 10px;
+  }
+  .measurement-guide span {
+    display: block;
+    color: #555;
+    font-size: 13px;
+  }
+  .how-to-measure {
+    margin-bottom: 40px;
+  }
+  .know-your-size {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .know-your-size button {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .know-your-size button:hover {
+    background-color: #333;
+  }

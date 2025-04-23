@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo5.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title translate="no">OUTROOM</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+        publicKey: "a4hIpRurxlZclZywh",
+    });
+    })();
+</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo5.png" alt="OUTROOM Logo" class="logo" height="90" width="100">    
+            <div class="left-header"></div>
+            <h1 id="n" translate="no">OUTROOM</h1>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#collection">Collection</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="basket">
+                <input type="checkbox" id="toggle-basket" hidden>
+              
+                <!-- Ce label déclenche le toggle -->
+                <label for="toggle-basket" class="white-btn basket-icon">
+                  <i class="fas fa-shopping-basket"></i>
+                  <span id="basket-count">0</span>
+                </label>
+              
+                <div class="basket-details">
+                  <p id="order-message" style="color: red; margin-top: 10px;"></p>
+                  <h3>Your Basket</h3>
+                  <div id="basket-items"></div>
+              
+                  <!-- Formulaire client -->
+                  <form id="customer-details-form">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+              
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+              
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" placeholder="Enter your address (exact place or copy from google maps)" required></textarea>
+              
+                    <label for="kelmahlowa">Klima hlowa:</label>
+                    <input type="text" id="kelmahlowa" name="kelmahlowa" placeholder="MENGHIR HECHMA" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your right email" required>
+                  </form>
+              
+                  <p id="total-price">Total: 0.00 TND</p>
+                  <button class="pay-now">COMMAND-NOW</button>
+                  <button class="undo-button" id="undo-button">UNDO</button>
+                </div>
+              </div>
+              
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="home-photo-overlay">
+            </div>
+        </section>
+        <br>
+        <br>
+<!-- Collection Section -->
+<section id="collection" class="products">
+    <!-- Product 1 -->
+    <div class="product" data-name="product 1" data-price="80.00">
+        <div class="product-images">
+            <img src="Design sans titre (5)).png" alt="Product 1 Image 1" class="active">
+            <img src="Design sans titre (5))).png" alt="Product 1 Image 2">
+            <!--<img src="1.png" alt="Product 1 Image 3">-->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h3>Product 1</h3>
+        <p>Price: 80.00 TND</p>
+        <div class="sizes">
+            <label>Size:</label>
+            <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        
+        <div class="quantity">
+            <!--button class="decrement">-</button-->
+            <span class="count">1</span>
+            <!--button class="increment">+</button-->
+        </div>
+        
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="know-your-size">
+            <a href="index3.html">
+              <button>Know Your Size</button>
+            </a>
+        </div>
+          
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product" data-name="product 2" data-price="60.00">
+        <div class="product-images">
+            <img src="Design sans titre (6))).png" alt="Product 2 Image 1" class="active">
+            <img src="Design sans titre (6)).png" alt="Product 2 Image 2">
+            <!--
+            <img src="images/product2_3.jpg" alt="Product 2 Image 3">
+            -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h3>Product 2</h3>
+        <p>Price: 60.00 TND</p>
+        <div class="sizes">
+            <label>Size:</label>
+            <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        <div class="quantity">
+            <!--button class="decrement">-</button-->
+            <span class="count">1</span>
+            <!--button class="increment">+</button-->
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="know-your-size">
+            <a href="index3.html">
+              <button>Know Your Size</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product" data-name="product 3" data-price="20.00">
+        <div class="product-images">
+            <img src="Design sans titre (8)).png" alt="Product 3 Image 1" class="active">
+            <img src="Design sans titre (8))).png" alt="Product 3 Image 2">
+            <!--
+            <img src="images/product3_3.jpg" alt="Product 3 Image 3">
+            -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h3>Product 3</h3>
+        <p>Price: 20.00 TND</p>
+        <div class="sizes">
+            <label>Size:</label>
+            <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        <div class="quantity">
+            <!--button class="decrement">-</button-->
+            <span class="count">1</span>
+            <!--button class="increment">+</button-->
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="know-your-size">
+            <a href="index3.html">
+              <button>Know Your Size</button>
+            </a>
+        </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="product" data-name="product 4" data-price="20.00">
+        <div class="product-images">
+            <img src="Design sans titre (7)).png" alt="Product 3 Image 1" class="active">
+            <img src="Design sans titre (7))).png" alt="Product 3 Image 2">
+            <!--
+            <img src="images/product3_3.jpg" alt="Product 3 Image 3">
+            -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h3>Product 3</h3>
+        <p>Price: 20.00 TND</p>
+        <div class="sizes">
+            <label>Size:</label>
+            <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        <div class="quantity">
+            <!--button class="decrement">-</button-->
+            <span class="count">1</span>
+            <!--button class="increment">+</button-->
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="know-your-size">
+            <a href="index3.html">
+              <button>Know Your Size</button>
+            </a>
+        </div>
+    </div>
+<!--  5
+    <div class="product" data-name="product 5" data-price="20.00">
+        <div class="product-images">
+            <img src="Design sans titre (3).png" alt="Product 3 Image 1" class="active">
+            <img src="Design sans titre (2).png" alt="Product 3 Image 2">
+            <img src="images/product3_3.jpg" alt="Product 3 Image 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h3>Product 3</h3>
+        <p>Price: 20.00 TND</p>
+        <div class="sizes">
+            <label>Size:</label>
+            <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        <div class="quantity">
+            <span class="count">1</span>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="know-your-size">
+            <a href="index3.html">
+              <button>Know Your Size</button>
+            </a>
+        </div>
+    </div>
+6
+    <div class="product" data-name="product 6" data-price="20.00">
+        <div class="product-images">
+            <img src="Design sans titre (1).png" alt="Product 3 Image 1" class="active">
+            <img src="Design sans titre.png" alt="Product 3 Image 2">
+            <img src="images/product3_3.jpg" alt="Product 3 Image 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h3>Product 3</h3>
+        <p>Price: 20.00 TND</p>
+        <div class="sizes">
+            <label>Size:</label>
+            <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        <div class="quantity">
+            <span class="count">1</span>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="know-your-size">
+            <a href="index3.html">
+              <button>Know Your Size</button>
+            </a>
+        </div>
+    </div>
+7
+    <div class="product" data-name="product 7" data-price="20.00">
+        <div class="product-images">
+            <img src="Design sans titre (16).png" alt="Product 3 Image 1" class="active">
+            <img src="images/product3_3.jpg" alt="Product 3 Image 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h3>Product 3</h3>
+        <p>Price: 20.00 TND</p>
+        <div class="sizes">
+            <label>Size:</label>
+            <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        <div class="quantity">
+            <span class="count">1</span>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="know-your-size">
+            <a href="index3.html">
+              <button>Know Your Size</button>
+            </a>
+        </div>
+    </div>
+8
+    <div class="product" data-name="product 8" data-price="20.00">
+        <div class="product-images">
+            <img src="Design sans titre (17).png" alt="Product 3 Image 1" class="active">
+            <img src="Design sans titre (12).png" alt="Product 3 Image 2">
+            <img src="images/product3_3.jpg" alt="Product 3 Image 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <h3>Product 3</h3>
+        <p>Price: 20.00 TND</p>
+        <div class="sizes">
+            <label>Size:</label>
+            <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </div>
+        <div class="quantity">
+            <span class="count">1</span>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+        <div class="know-your-size">
+            <a href="index3.html">
+              <button>Know Your Size</button>
+            </a>
+        </div>
+    </div>
+-->
+</section>
+
+
+        
+        
+        <!-- About Us Section -->
+        <section id="about" class="about-us">
+            <div class="about-image-container">
+                <!--<img src="outroomBGG.png" alt="About Us Image" class="about-image">-->
+                <div class="about-text-overlay">
+                    <p translate="no"><center>Outroom is a Tunisian streetwear brand born from a passion for urban culture, creativity, and individuality. We empower individuals to express their unique style and redefine what it means to own the streets. With a focus on authenticity, innovation, and community, Outroom creates designs that inspire self-expression and challenge fashion norms.
+                     We celebrate creativity and style, providing a space where everyone can find their voice through fashion.</center></p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-form">
+            <h3 style="color: grey; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><center>KEN THEB TKOUL HAJA</center></h3>
+            <form id="contact-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">RAYEK</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" id="send-button">Send</button>
+            </form>
+        </section>                       
+    </main>
+    <br>
+    <br>
+    <br>
+    <footer style="text-align:center; padding: 20px; font-size: 14px;">
+        <p>
+          <a href="CGV_Outroom.html" style="margin-right: 10px;">Conditions Générales de Vente</a> | 
+          <a href="privacy.html" style="margin-left: 10px;">Politique de Confidentialité</a>
+        </p>
+        <p translate="no">&copy; 2024 Outroom Streetwear - All rights reserved</p>
+      </footer>
+      
+    <script src="script.js"></script>
+</body>
+</html>

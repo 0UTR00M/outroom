@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo5.png" type="image/x-icon" >
+  <title translate="no">OUTROOM</title>
+  <link rel="stylesheet" href="styles1.css"> <!-- Link to CSS file -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- EmailJS SDK -->
+  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+        publicKey: "a4hIpRurxlZclZywh",
+    });
+    })();
+</script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>WELCOME</h2>
+    <img src="s.gif" alt="OUTROOM Logo" class="logo" height="160" width="190">
+    <section id="waitlist-section" class="countainer">
+      <h4>JOIN OUR WAIT-LIST</h4>
+      <input type="text" id="name" name="full-name" placeholder="Enter your nickname" required>
+      <input type="email" id="waitlist-email" placeholder="Enter your email">
+      <button id="submit-waitlist">Join</button>
+      <p id="waitlist-message" class="error"></p>
+    </section>
+    
+    <form id="entrance-form">
+      <input type="password" id="password" placeholder="Enter password" required>
+      <button type="submit">Join Us</button>
+      <p id="error-message" class="error"></p>
+    </form>
+  </div>
+  <script src="script1.js"></script> <!-- Link to JavaScript file -->
+  <script src="cinematic.js"></script> <!-- Script for cinematic intro -->
+</body>
+</html>
